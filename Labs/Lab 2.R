@@ -100,8 +100,7 @@ ggplot(dataset, aes(x = log10(PROPERTYSQFT), y = log10(PRICE))) +
   stat_smooth(method = "lm", col="red") +
   labs(title = "Model 3: log(Price) vs log(PROPERTYSQFT) + BEDS + BATH",
        x = "log(PROPERTYSQFT) + BEDS + BATH",
-       y = "log10(Price)") +
-  theme_minimal()http://127.0.0.1:38673/graphics/bec78ad8-bff0-4e26-8097-fd34514512af.png
+       y = "log10(Price)")
 
 ## residual plot
 ggplot(model3, aes(x = .fitted, y = .resid)) +
