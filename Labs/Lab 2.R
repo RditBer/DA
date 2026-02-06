@@ -117,11 +117,11 @@ ggplot(model3, aes(x = .fitted, y = .resid)) +
 cat("\n========== MODEL COMPARISON ==========\n")
 cat("Model 1 - Adjusted R-squared:", summary(model1)$adj.r.squared, "\n")
 cat("Model 2 - Adjusted R-squared:", summary(model2)$adj.r.squared, "\n")
-cat("Model 3 - Adjusted R-squared:", summary(model3)$adj.r.squared, "\n\n")
+cat("Model 3 - Adjusted R-squared:", summary(model3)$adj.r.squared, "\n")
 
 cat("Model 1 - Residual Standard Error:", summary(model1)$sigma, "\n")
 cat("Model 2 - Residual Standard Error:", summary(model2)$sigma, "\n")
-cat("Model 3 - Residual Standard Error:", summary(model3)$sigma, "\n\n")
+cat("Model 3 - Residual Standard Error:", summary(model3)$sigma, "\n")
 
 cat("Model 1 - AIC:", AIC(model1), "\n")
 cat("Model 2 - AIC:", AIC(model2), "\n")
