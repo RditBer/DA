@@ -95,7 +95,7 @@ summary(model3)
 
 ## scatter plot of most significant variable vs Price with best fit line
 ## most significant variable: BATH (smallest p-value)
-ggplot(dataset, aes(x = BATH, y = log10(PRICE))) +
+ggplot(dataset, aes(x = log10(PROPERTYSQFT), y = log10(PRICE))) +
   geom_jitter(width = 0.1, height = 0, alpha = 0.4) +
   stat_smooth(method = "lm", col="red") +
   labs(title = "Model 3: log(Price) vs Bath",
