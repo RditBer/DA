@@ -98,10 +98,10 @@ summary(model3)
 ggplot(dataset, aes(x = log10(PROPERTYSQFT), y = log10(PRICE))) +
   geom_jitter(width = 0.1, height = 0, alpha = 0.4) +
   stat_smooth(method = "lm", col="red") +
-  labs(title = "Model 3: log(Price) vs Bath",
-       x = "Number of Bathrooms",
+  labs(title = "Model 3: log(Price) vs log(PROPERTYSQFT) + BEDS + BATH",
+       x = "log(PROPERTYSQFT) + BEDS + BATH",
        y = "log10(Price)") +
-  theme_minimal()
+  theme_minimal()http://127.0.0.1:38673/graphics/bec78ad8-bff0-4e26-8097-fd34514512af.png
 
 ## residual plot
 ggplot(model3, aes(x = .fitted, y = .resid)) +
