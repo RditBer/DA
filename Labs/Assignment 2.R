@@ -10,7 +10,7 @@ library(ggplot2)
 library(class)
 
 # Load dataset
-epi_results_2024_pop_gdp <- read_csv("C:/Users/ardit/Downloads/epi_results_2024_pop_gdp.csv")
+epi_results_2024_pop_gdp <- read_csv("C:/Users/Diti/Desktop/Data Analytics/Assignment 2/epi_results_2024_pop_gdp.csv")
 dataset <- epi_results_2024_pop_gdp
 
 # Choose variable for analysis
@@ -158,12 +158,6 @@ plot(model2_subset2$fitted.values, model2_subset2$residuals,
      pch = 19, col = "springgreen3", cex = 1.2)
 abline(h = 0, col = "chartreuse4", lwd = 2)
 
-# 3.3: Model Comparison
-# Eastern Europe: Model 2 (GDP, R² = 0.52) significantly outperforms Model 1 (log population, R² = 0.03)
-# Former Soviet States: Model 2 (GDP, R² = 0.60) significantly outperforms Model 1 (log population, R² = 0.08)
-# Both regions show GDP is a much stronger predictor of air quality than population size,
-# suggesting economic development correlates with better environmental standards.
-
 # ============================================
 # TASK 4: kNN Classification
 # ============================================
@@ -230,9 +224,3 @@ confusion_matrix2 <- table(Predicted = knn_pred2, Actual = test_labels)
 print(confusion_matrix2)
 accuracy2 <- sum(knn_pred2 == test_labels) / length(test_labels)
 cat("Accuracy:", accuracy2, "\n")
-
-# 4.3: Comparison
-# Both models achieved 60% accuracy. AIR.new and EPI.new provide similar discriminatory
-# power for distinguishing between Eastern Europe and Former Soviet States, suggesting
-# both air quality and overall environmental performance are similarly distributed
-# across these regions.
